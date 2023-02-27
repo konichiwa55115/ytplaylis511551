@@ -31,6 +31,7 @@ from pyrogram.errors import MessageNotModified
 from pyrogram.types.bots_and_keyboards.inline_keyboard_button import InlineKeyboardButton
 from pyrogram.types.bots_and_keyboards.inline_keyboard_markup import InlineKeyboardMarkup
 import shutil
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
 is_downloading = False
 
