@@ -125,6 +125,14 @@ def ytdl_dowload(url, opts):
 async def uloader(client, message):
 
     global is_downloading
+     try:
+        fsub = "https://t.me/ibnAlQyyim"
+    except:
+        pass
+    if fsub:
+        if not (await pyro_fsub(client, message, fsub) == True):
+            return
+
     if is_downloading:
         return await message.reply_text(
             "`Another download is in progress, try again after sometime.`", quote=True
@@ -314,7 +322,7 @@ async def pyro_fsub(c, message, fsub):
             chat_id=message.chat.id,
             text="**Please Join My Updates Channel to Use Me!**",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Join Now", url="https://t.me/harp_tech")]]
+                [[InlineKeyboardButton("Join Now", url="https://t.me/ibnAlQyyim")]]
             ),
         )
         return False
@@ -322,7 +330,7 @@ async def pyro_fsub(c, message, fsub):
         print(kk)
         await c.send_message(
             chat_id=message.chat.id,
-            text="Something went Wrong. Contact my [Support Group](https://t.me/harp_chat).",
+            text="Something went Wrong. Contact me https://t.me/ibnAlQyyim).",
             parse_mode="markdown",
             disable_web_page_preview=True,
         )
