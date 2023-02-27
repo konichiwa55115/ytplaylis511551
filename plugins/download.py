@@ -312,7 +312,7 @@ async def pyro_fsub(c, message, fsub):
         if user.status == "kicked":
             await c.send_message(
                 chat_id=message.chat.id,
-                text="Sorry, You are Banned to use me. Contact my [Support Group](https://t.me/harp_chat).",
+                text="أنت محظور . لقد خالفت قواعد استخدام البوت ",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
             )
@@ -320,9 +320,9 @@ async def pyro_fsub(c, message, fsub):
     except UserNotParticipant:
         await c.send_message(
             chat_id=message.chat.id,
-            text="**Please Join My Updates Channel to Use Me!**",
+            text="**يجب أن تشترك في قناتي لتستطيع استخدام البوت**",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Join Now", url="https://t.me/ibnAlQyyim")]]
+                [[InlineKeyboardButton("انضم الآن ", url="https://t.me/ibnAlQyyim")]]
             ),
         )
         return False
@@ -330,7 +330,7 @@ async def pyro_fsub(c, message, fsub):
         print(kk)
         await c.send_message(
             chat_id=message.chat.id,
-            text="Something went Wrong. Contact me https://t.me/ibnAlQyyim).",
+            text="حدث حطأ ما , راسلني على القناة (https://t.me/ibnAlQyyim).",
             parse_mode="markdown",
             disable_web_page_preview=True,
         )
