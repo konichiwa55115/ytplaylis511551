@@ -127,7 +127,7 @@ async def uloader(client, message):
 
     global is_downloading
     try:
-        fsub = "https://t.me/ibnAlQyyim"
+        fsub = int(-1001230414925)
     except:
         pass
     if fsub:
